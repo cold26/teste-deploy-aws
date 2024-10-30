@@ -12,7 +12,7 @@ const router = Router();
 
 
 router.get('/', (_, res) => {
-  return res.send('Olá, DEV!');
+  return res.send('Api rodando!');
 });
 
 
