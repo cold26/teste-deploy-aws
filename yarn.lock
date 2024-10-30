@@ -1602,6 +1602,11 @@ cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+database@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/database/-/database-0.0.2.tgz#8533a4203ea02b37cde5becbb90d0b34b5a2357a"
+  integrity sha512-lrqvU32firrb2TBjn4Iv9V1Mh90rqUtyyLAvdSqdGP2w7IrNy+oI5IqGNowHq8o+/WVnQtKNfNIpLYd6uWZLHw==
+
 debug@2.6.9:
   version "2.6.9"
   resolved "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
@@ -3705,7 +3710,7 @@ pg-types@^4.0.1:
     postgres-interval "^3.0.0"
     postgres-range "^1.1.1"
 
-pg@^8.13.1:
+pg@^8.13.1, pg@^8.6.0:
   version "8.13.1"
   resolved "https://registry.yarnpkg.com/pg/-/pg-8.13.1.tgz#6498d8b0a87ff76c2df7a32160309d3168c0c080"
   integrity sha512-OUir1A0rPNZlX//c7ksiu7crsGZTKSOXJPgtNiHGIlC9H0lO+NC6ZDYksSgBYY/thSWhnSRBv8w1lieNNGATNQ==
@@ -3746,6 +3751,13 @@ pkg-dir@^4.2.0:
   integrity sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==
   dependencies:
     find-up "^4.0.0"
+
+postgre@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/postgre/-/postgre-0.1.8.tgz#9b6f8aa21d672691dbe839026c8faaa6ec642b5e"
+  integrity sha512-nP65V7ZxDzrvo1XD1Ks1rATx/QzySF6s1tNiRlv5PDghjA+YPzxvvncM/sN0hqZWjz78Txct6gArbxmxNBonXQ==
+  dependencies:
+    pg "^8.6.0"
 
 postgres-array@~2.0.0:
   version "2.0.0"
