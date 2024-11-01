@@ -1,13 +1,11 @@
 import { Knex } from 'knex';
-
 import { ETableNames } from '../ETableNames';
-
 
 export async function up(knex: Knex) {
   return knex
     .schema
     .createTable(ETableNames.proprietario, table => {
-      table.bigIncrements('id').primary().index();
+      table.bigIncrements('id').primary().index(); // BIGINT UNSIGNED AUTO_INCREMENT
       table.string('nomeCompleto').index().notNullable();
       table.string('cpf', 11).notNullable();  
       table.string('telefone', 15);           
@@ -16,12 +14,13 @@ export async function up(knex: Knex) {
 
       table
         .bigInteger('petId')
+        .unsigned() // Adicionando UNSIGNED para compatibilidade
         .index()
         .notNullable()
         .references('id')
         .inTable(ETableNames.pet)
         .onUpdate('CASCADE')
-        .onDelete(' RESTRICT ');
+        .onDelete('RESTRICT');
 
       table.comment('Tabela usada para armazenar os proprietarios no sistema.');
     }).then(() => {
