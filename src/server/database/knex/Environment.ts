@@ -29,7 +29,7 @@ export const test: Knex.Config = {
 };
 
 export const development: Knex.Config = {
-  client: 'mysql2',
+  client: 'pg',
   migrations: {
     directory: path.resolve(__dirname, '..', 'migrations'),
   },
@@ -38,7 +38,7 @@ export const development: Knex.Config = {
   },
   connection: {
     host: process.env.DB_HOST,
-    port: 3306,
+    port: Number(process.env.DB_PORT),
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
